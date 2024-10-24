@@ -75,6 +75,7 @@ int main(int argc, char **argv)
     nob_cmd_append(&cmd, "-I./"RAYGUI_SRC);
     nob_cmd_append(&cmd, "-o", OUTPUT, SRC);
     nob_cmd_append(&cmd, "-L./"RAYLIB_LIB);
+    nob_cmd_append(&cmd, "-l:libraylib.a", "-lm");
 
     if (!nob_cmd_run_sync(cmd)) return 1;
 
